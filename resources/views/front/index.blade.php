@@ -59,7 +59,7 @@
             <!-- Left Content (Description) -->
             <div class="col-md-6 wow animate__fadeIn" data-duration="2s">
                 <h2><b>
-                        Ample Chair & <span>Metal Industrys</b></span>
+                        Ample Chair & <span>Metal Industry</b></span>
                 </h2>
                 <p class="about-section-description">
                     {!! str_limit(html_entity_decode(@$about_page->summary), 700) !!}
