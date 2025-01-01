@@ -1,0 +1,12 @@
+[22-Dec-2021 04:28:26 UTC] PHP Warning:  require(/home5/webtest1/mahabodhi.webhouse.com.np/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 24
+[22-Dec-2021 04:28:26 UTC] PHP Fatal error:  require(): Failed opening required '/home5/webtest1/mahabodhi.webhouse.com.np/public/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 24
+[22-Dec-2021 04:28:31 UTC] PHP Warning:  require(/home5/webtest1/mahabodhi.webhouse.com.np/public/../vendor/autoload.php): failed to open stream: No such file or directory in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 24
+[22-Dec-2021 04:28:31 UTC] PHP Fatal error:  require(): Failed opening required '/home5/webtest1/mahabodhi.webhouse.com.np/public/../vendor/autoload.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 24
+[22-Dec-2021 04:45:51] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:46:06] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:46:28] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:46:38] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:46:48] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:46:54] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[22-Dec-2021 04:47:46] PHP Parse error:  syntax error, unexpected T_FUNCTION in /home5/webtest1/mahabodhi.webhouse.com.np/public/index.php on line 51
+[18-Jan-2024 14:58:41 UTC] PHP Fatal error:  Cannot use App\Models\Career as Career because the name is already in use in /home3/placeforvisit/satya.placeforvisit.com/app/Http/Controllers/Front/FrontEndController.php on line 20

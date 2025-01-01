@@ -1,0 +1,281 @@
+@extends('layouts.front')
+@section('page_title') {{@$meta_info->title}}@endsection
+@section('meta')
+@include('front.include.meta')
+@endsection
+@section('styles')
+
+@endsection
+@section('content')
+
+@if(isset($sliders) && $sliders->count())
+<!-- main slider section starts -->
+<section class="slider">
+    <div class="owl-carousel home_owl_slider owl-theme">
+        @foreach($sliders as $slider_data)
+        <a class="slider-wrapper">
+            <figure style="background-image:url('{{asset('/uploads/slider/'.$slider_data->image)}}')">
+                <div class="container">
+                    <div class="slider-content mt-5">
+                        <div class="slider-content-side">
+                            {!!html_entity_decode($slider_data->sub_title)!!}
+                            <h1>{{ @$slider_data->title}}</h1>
+                        </div>
+
+                        <span class="btn view-more">
+                            View Detail
+                        </span>
+                    </div>
+                </div>
+            </figure>
+        </a>
+        @endforeach
+    </div>
+</section>
+<!-- main slider section ends -->
+@endif
+<!--   about section starts -->
+
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-12 mx-auto text-center wow animate__fadeIn" data-duration="2s">
+                <div class="about-section-title">
+                    <h2>Satya Herbal & <span>Spice Products</span></h2>
+                </div>
+                <p class="about-section-description">
+                    {!! str_limit(html_entity_decode(@$about_page->summary), 700)  !!}
+                </p>
+                <div>
+                <a href="{{ route('getProductByCategory', $about_page->slug) }}" class="btn-about-section">
+                    Read More
+                </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+ <section class="wall-section" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper  about-section-title text-center">
+                    <h2>Our <span>Products</span> </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="wall-wrapper wow animate__fadeIn" data-wow-duration="2s">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="wall-content">
+                        <h3>Botanical Extracts</h3>
+                        <div class=" rate-devider">
+                            <a href="">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+{{-- <div class="row align-items-center">
+    <p>{{$quotes}}</p>
+
+
+    @foreach ($quotes as $index=>$quote)
+    @if($index%2==0)
+
+    <div class="col-md-6">
+        <div class="img-container">
+            <img class="good-img" src="{{asset($quote->quote_image)}}">
+        </div>
+    </div>
+    @else
+    <div class="col-md-6 order-last" >
+        <div class="img-container">
+            <img class="good-img" src="{{asset($quote->quote_image)}}">
+        </div>
+    </div>
+
+    @endif
+
+
+     <div class="col-md-6">
+        <div class="good text-container ">
+            <h3 class="mb-3 sub-title">{{$quote->quote_title}}</h3>
+            <p>{{$quote->quote_description}}</p>
+    </div>
+    </div>
+</div>
+
+
+@endforeach --}}
+
+
+<section class="good-section" style="background-image:url(https://barahsinghe.com/wp-content/themes/starter/imagio_s/img/texture/background_texture.png)">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper  about-section-title text-center">
+                    <h2>Goodness of <span>Nepal</span> </h2>
+                </div>
+            </div>
+        </div>
+        {{-- @foreach ($quotes as $index=>$quote)
+        @if ($index[0]) --}}
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <div class="img-container">
+                    <img class="good-img" src="{{asset($quotes[0]->quote_image)}}">
+                </div>
+            </div>
+             <div class="col-md-6">
+                <div class="good text-container ">
+                    <h3 class="mb-3 sub-title">{{$quotes[0]->quote_title}}</h3>
+                    <p>{{$quotes[0]->quote_description}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="good text-container ">
+                    <h3 class="mb-3 sub-title">{{$quotes[1]->quote_title}} </h3>
+                    <p>{{$quotes[1]->quote_description}}</p>
+                </div>
+            </div>
+             <div class="col-md-6">
+                 <div class="img-container">
+                    <img class="good-img" src="{{asset($quotes[1]->quote_image)}}">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="certifcation-section" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-wrapper  about-section-title text-center">
+                    <h2>Certification & <span>Recognization</span> </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center mt-5">
+            @foreach ($recognizations as $recognization)
+
+
+            <div class="col-md-2">
+                <div class="img-container">
+                    <a href="{{$recognization->link}}">
+                    <img class="" src="{{asset($recognization->image2)}}">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- blogs section start  -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="about-section-title">
+                <h2 class="text-center">News & <span>Blogs</span></h2>
+            </div>
+            <div class="row mt-4">
+                @if(isset($all_post) &&  $all_post->count())
+                    @foreach($all_post as $post_data)
+                        <div class="mx-auto mb-4 col-lg-4 col-sm-12">
+                            <div class="card blog-section-card border-0 shadow-sm">
+                                <a href="{{route('PostDetail', $post_data->slug)}}">
+                                    <img src="{{asset('/uploads/blog/banner/'.$post_data->thumbnail)}}" alt="" class="card-img img-fluid">
+                                </a>
+                                <div class="card-body px-3">
+                                    <a href="{{route('PostDetail', $post_data->slug)}}">
+                                        <h5 class="card-title">{{$post_data->title}}</h5>
+                                    </a>
+                                    <p class="card-description">
+                                        {{  str_limit(@$post_data->summary, 80)  }}
+
+                                    </p>
+                                    <a href="{{route('PostDetail', $post_data->slug)}}" class="btn btn-blog">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+            <div class="text-center mt-4">
+                <a href="{{route('blogs')}}" class="btn-blog">View More</a>
+            </div>
+        </div>
+    </section>
+<!-- blogs section end  -->
+
+
+@endsection
+@section('scripts')
+
+<script>
+    $(document).ready(function() {
+        $('#subscribe-form').on('submit', function(e) {
+            $('.subscribeme').attr('disabled', 'disabled');
+            e.preventDefault();
+            $.ajax({
+                url: "{{route('addSubscriber')}}",
+                method: "POST",
+                data: new FormData(this),
+                dataType: 'JSON',
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(response) {
+                    if (response.status == false) {
+                        $('.subscribeme').removeAttr('disabled', 'disabled');
+                        FailedResponseFromDatabase(response.message);
+                    }
+                    if (response.status == true) {
+                        $('#sub_email').val('');
+                        $('#sub_full_name').val('');
+                        DataSuccessInDatabase(response.message);
+                        setTimeout(function() {
+
+                            location.reload("{{route('blogs')}}");
+                        }, 2500);
+                    }
+                }
+            });
+        })
+    })
+</script>
+@endsection
