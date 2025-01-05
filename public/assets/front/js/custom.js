@@ -118,6 +118,24 @@ $(document).ready(function() {
 })
 
 
+
+document.querySelectorAll('.main_drop_item > a').forEach(parentLink => {
+    parentLink.addEventListener('click', function (e) {
+        const submenu = this.nextElementSibling; // The submenu
+
+        // Check if the submenu exists
+        if (submenu && submenu.classList.contains('sub-menu')) {
+            e.preventDefault(); // Prevent navigation
+
+            // Toggle a class to show/hide the submenu
+            submenu.classList.toggle('active');
+        }
+    });
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
     // make it as accordion for smaller screens
 //    if (window.innerWidth < 992) {
