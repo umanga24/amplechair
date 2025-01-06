@@ -93,8 +93,11 @@
 
                             <a href="{{ route('allProducts') }}">
                                 Products
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <span class="dropdown-toggle">
+                                    <i class="" aria-hidden="true"></i>
+                                </span>
                             </a>
+
 
                             @if(isset($frontcategories) && $frontcategories->count())
 

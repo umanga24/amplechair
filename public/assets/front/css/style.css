@@ -1342,19 +1342,21 @@ footer p{
 
 /* End */
 
-
+/* mobile view for product and dropdown responsive*/
 
 @media (max-width: 768px) {
     .sub-menu {
-        position: static; /* Allow stacking for mobile */
-        display: none;    /* Hide by default */
+        position: static; /* Stack submenus for mobile */
+        display: none;    /* Initially hidden */
     }
 
     .sub-menu.active {
-        display: block; /* Show when toggled */
+        display: block;   /* Show when toggled */
     }
 
     .main_drop_item {
-        position: relative; /* Ensure the submenu is within parent bounds */
+        position: relative; /* Keep dropdowns inside their parent */
     }
 }
+
+/*END*/

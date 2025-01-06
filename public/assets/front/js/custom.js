@@ -117,21 +117,26 @@ $(document).ready(function() {
 
 })
 
+//Product in navbar
 
+document.querySelectorAll('.main_drop_item').forEach(mainItem => {
+    const parentLink = mainItem.querySelector('a'); // Main link
+    const dropdownToggle = mainItem.querySelector('.dropdown-toggle'); // Dropdown toggle
 
-document.querySelectorAll('.main_drop_item > a').forEach(parentLink => {
-    parentLink.addEventListener('click', function (e) {
-        const submenu = this.nextElementSibling; // The submenu
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default action for the toggle
+            const submenu = mainItem.querySelector('.sub-menu');
 
-        // Check if the submenu exists
-        if (submenu && submenu.classList.contains('sub-menu')) {
-            e.preventDefault(); // Prevent navigation
-
-            // Toggle a class to show/hide the submenu
-            submenu.classList.toggle('active');
-        }
-    });
+            if (submenu) {
+                submenu.classList.toggle('active'); // Toggle the submenu visibility
+            }
+        });
+    }
 });
+//end product in nav bar
+
+
 
 
 
