@@ -7,6 +7,7 @@
     <!--<title> @yield('page_title')||{{@$web_detail->company_name}}</title>-->
     <title>{{@$web_detail->company_name}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Pw66_6RO7YNUo2qOQZOAW6PEoYhMrMX0t4EaWqk3CEM" />
 
     @yield('meta')
 
@@ -27,6 +28,16 @@
     @yield('styles')
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <script src="{{asset('/assets/front/js/jquery-3.4.1.min.js')}}"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D578N4R1H9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D578N4R1H9');
+</script>
+
 </head>
 
 <body>
