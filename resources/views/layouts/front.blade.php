@@ -8,6 +8,7 @@
     <title>{{@$web_detail->company_name}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Pw66_6RO7YNUo2qOQZOAW6PEoYhMrMX0t4EaWqk3CEM" />
+    
 
     @yield('meta')
 
@@ -30,6 +31,7 @@
     <script src="{{asset('/assets/front/js/jquery-3.4.1.min.js')}}"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D578N4R1H9"></script>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="lypDiBGsUiZMfyQv4veB5A" async></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
